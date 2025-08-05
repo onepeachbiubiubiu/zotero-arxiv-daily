@@ -2,8 +2,10 @@ name: Send emails daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 12 * * *' 
-    - cron: '0 2 * * *'
+    # 对应北京时间下午 18:00
+    - cron: '0 10 * * *' 
+    # 对应北京时间上午 8:00
+    - cron: '0 0 * * *'
 
 jobs:
   calculate-and-send:
